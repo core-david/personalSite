@@ -2,9 +2,9 @@ module.exports = {
   title: "David Vargas",
   shortTitle: "David Vargas",
   description:
-    "A beautiful and elegant blog theme starter project por Eleventy",
-  url: "https://example.com/",
+    "Personal Website",
+  url: "https://dvargasl.netlify.app/",
   author: {
-    name: "Your Name Here",
+    name: "David Vargas",
   },
 };

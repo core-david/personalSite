@@ -3,6 +3,29 @@ layout: layouts/default.liquid
 ---
 
 <div class="main-sections">
+  <section class="profile">
+    <div class="profile-content">
+      <div class="profile-text">
+        <h1>Hi, I'm [Your Name]</h1>
+        <p>I'm a Data Science and Mathematics graduate from Tecnológico de Monterrey. My research and development interests focus on [your specific interests, e.g., machine learning, statistical modeling, data visualization].</p>
+        <div class="profile-links">
+          <a href="/CV-2025.pdf" class="profile-link" title="Download CV" target="_blank" rel="noopener noreferrer">
+            <i data-feather="file-text"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/core-david/" class="profile-link" title="LinkedIn Profile">
+            <i data-feather="linkedin"></i>
+          </a>
+          <a href="https://github.com/core-david" class="profile-link" title="GitHub Profile">
+            <i data-feather="github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="profile-image">
+        <img src="/profile-c.png" alt="[Your Name]" />
+      </div>
+    </div>
+  </section>
+
   <section>
     <h2>Latest</h2>
     {% assign posts = collections.posts %}
@@ -10,23 +33,6 @@ layout: layouts/default.liquid
     {% include "postlist.liquid" %}
   </section>
 
-  {% assign tagList = collections | postTags %} {% if tagList.length > 0 %}
-  <section>
-    <h2>Topics</h2>
-    {%- for tag in tagList -%}
-    <a href="/tags/{{ tag.name }}">{{ tag.name }}({{ tag.count }})</a>{% if
-    forloop.last != true %}<span>, </span>{% endif %} {%- endfor -%}
-  </section>
-  {% endif %}
-
-  <section>
-    <h2>More articles</h2>
-    {% assign posts = collections.posts %}
-    {% assign count = 5 %}
-    {% assign offset = 1 %}
-    {% include "postlist.liquid" %}
-    <a class="articles-link" href="/articles">All the articles</a>
-  </section>
 </div>
 
 <style>
@@ -39,4 +45,79 @@ layout: layouts/default.liquid
     display: block;
     margin-top: var(--space-4);
   }
+  .profile {
+    margin-bottom: var(--space-8);
+  }
+  .profile-content {
+    display: flex;
+    gap: var(--space-8);
+    align-items: center;
+  }
+  .profile-text {
+    flex: 2;
+  }
+  .profile-image {
+    flex: 1;
+    transition: all 0.3s ease;
+  }
+  .profile-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .profile-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  .profile-links {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+  }
+  .profile-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .profile-link i {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+  }
+  .profile-link:hover {
+    background-color: var(--color-bg-secondary);
+    color: #3182ce; /* Blue color on hover */
+    transform: translateY(-2px); /* Makes the link jump slightly */
+  }
+  .profile-link:hover i {
+    transform: scale(1.1); /* Makes the icon slightly bigger */
+    color: #3182ce; /* Blue color on hover */
+  }
+  @media (max-width: 768px) {
+    .profile-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .profile-links {
+      justify-content: center;
+    }
+    .profile-image img {
+      max-width: 200px;
+    }
+  }
 </style>
+
+
+<!-- Add Feather Icons script at the end of your body tag -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+<script>
+  // Initialize Feather Icons
+  feather.replace();
+</script>
