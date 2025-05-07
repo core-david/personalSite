@@ -6,25 +6,38 @@ layout: layouts/default.liquid
   <section class="profile">
     <div class="profile-content">
       <div class="profile-text">
-        <h1>Hi, I'm [Your Name]</h1>
-        <p>I'm a Data Science and Mathematics graduate from Tecnológico de Monterrey. My research and development interests focus on [your specific interests, e.g., machine learning, statistical modeling, data visualization].</p>
-        <div class="profile-links">
-          <a href="/CV-2025.pdf" class="profile-link" title="Download CV" target="_blank" rel="noopener noreferrer">
-            <i data-feather="file-text"></i>
+        <h1>Hi, I'm David Vargas</h1>
+        <p>Passionate about science and technology, especially applied math, AI and engineering .
+          Graduated in Data Science and Mathematics from <a href="https://tec.mx/en" target="_blank" rel="noopener noreferrer">Tecnológico de Monterrey</a> .
+          Worked in Computational Biology in the laboratory of <a href="https://www.bio.purdue.edu/People/profile/mgribsko.html" target="_blank" rel="noopener noreferrer">Dr. Gribskov</a> at Purdue University.
+          Consultancy work with Ternium, Nuevo León Gov., and TCA Software.</p>
+        <div class="me-links">
+          <a href="/CV-2025.pdf" title="Download CV" target="_blank" rel="noopener noreferrer">
+            <img src="/cv.png" alt="CV" class="icon-link" />
           </a>
-          <a href="https://www.linkedin.com/in/core-david/" class="profile-link" title="LinkedIn Profile">
-            <i data-feather="linkedin"></i>
+          <a href="https://www.linkedin.com/in/core-david/" title="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
+            <img src="/linkedin.png" alt="LinkedIn" class="icon-link" />
           </a>
-          <a href="https://github.com/core-david" class="profile-link" title="GitHub Profile">
-            <i data-feather="github"></i>
+          <a href="https://github.com/core-david" title="GitHub Profile" target="_blank" rel="noopener noreferrer">
+            <img src="/github.png" alt="Leetcode" class="icon-link" />
+          </a>
+          <a href="https://leetcode.com/u/core-david/" title="Leetcode Profile" target="_blank" rel="noopener noreferrer">
+            <img src="/leetcode.png" alt="Leetcode" class="icon-link" />
+          </a>
+          <a href="https://datalemur.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/datalemur.png" alt="Datalemur" class="icon-link" />
           </a>
         </div>
       </div>
       <div class="profile-image">
-        <img src="/profile-c.png" alt="[Your Name]" />
+        <img src="/profile-c.png" alt="davidVargas" />
       </div>
     </div>
   </section>
+
+  <div class='me-links'>
+    
+  </div>
 
   <section>
     <h2>Latest</h2>
@@ -36,14 +49,37 @@ layout: layouts/default.liquid
 </div>
 
 <style>
+
+.me-links {
+  display: flex;
+  gap: 16px; /* or use var(--space-4) if it's defined */
+  margin-top: var(--space-4);
+  align-items: center;
+}
+
+.me-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-link {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon-link:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  cursor: pointer;
+}
   .main-sections {
     display: flex;
     flex-direction: column;
     gap: var(--space-7);
-  }
-  .articles-link {
-    display: block;
-    margin-top: var(--space-4);
   }
   .profile {
     margin-bottom: var(--space-8);
@@ -113,11 +149,3 @@ layout: layouts/default.liquid
     }
   }
 </style>
-
-
-<!-- Add Feather Icons script at the end of your body tag -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
-<script>
-  // Initialize Feather Icons
-  feather.replace();
-</script>

@@ -1,6 +1,6 @@
 module.exports = {
-  title: "David Vargas",
-  shortTitle: "David Vargas",
+  title: "David Vargas Portfolio",
+  shortTitle: "DV Portfolio",
   description:
     "Personal Website",
   url: "https://dvargasl.netlify.app/",

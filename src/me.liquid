@@ -1,0 +1,119 @@
+<div class="two-column">
+  <div class="column">
+    <!-- Left Column -->
+    <h2>Currently Reading: </h2>
+    <div class="profile-image">
+        <a href="https://www.amazon.com/Heart-Buddhas-Teaching-Transforming-Liberation/dp/0767903692" target="_blank" rel="noopener noreferrer">
+            <img src="/heartOfBuddha.jpg" alt="Book Title" style="width: 120px; height: auto; display: block;" />
+        </a>
+    </div>
+    <p class="small-text">Updated:May 2025</p>
+  </div>
+  <div class="column">
+    <!-- Right Column -->
+    <h2>Currently Listening: </h2>
+    <div class="profile-image">
+        <a href="https://open.spotify.com/album/6L5s2MnpJNhWA54koTN7UV?si=rVMk2OWXRTCljZ-0s0rZKw" target="_blank" rel="noopener noreferrer">
+            <img src="/laVoz.png" alt="Song Title" style="width: 120px; height: auto; display: block;" />
+        </a>
+    </div>
+    <p class="small-text">Updated:May 2025</p>
+  </div>
+</div>
+
+
+
+
+  <!-- Personal Text -->
+  <div class="below-sections">
+    <p>
+      My family is my reason to, love tennis, Alcaraz fan but Djokovic is the goat, trying to get right my golf swing, traditional Japanese food is my go to, went through long COVID and PTSD, over the garden wall is a master piece, grateful for the insights of Borges and Thich Nhat Hanh.
+    </p>
+  </div>
+
+  <!-- Links -->
+  <div class='me-links'>
+    <a href="https://open.spotify.com/user/gwh0mvhm5sx7oqyiuvjmyb8g5?si=c041cea875604cdc" target="_blank" rel="noopener noreferrer">
+        <img src="/spotify.png" alt="Spotify" class="icon-link" />
+    </a>
+    <a href="https://lichess.org/@/coredavid00" target="_blank" rel="noopener noreferrer">
+        <img src="/lichess.png" alt="LinkedIn" class="icon-link" />
+    </a>
+  </div>
+
+</div>
+
+
+
+<style>
+
+.two-column {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+.small-text {
+    font-size: 0.6rem;
+    color: #555;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.below-sections {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-7);
+    margin-top: 2rem
+}
+  
+.profile-image {
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.me-links {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+}   
+
+.icon-link {
+    width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon-link:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .profile-image img {
+      max-width: 200px;
+    }
+}
+
+
+</style>
+
