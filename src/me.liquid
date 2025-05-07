@@ -1,28 +1,27 @@
-<div class="two-column">
-  <div class="column">
-    <!-- Left Column -->
-    <h2>Currently Reading: </h2>
-    <div class="profile-image">
+<!-- Responsive Two-Column Layout -->
+<div class="content-container">
+  <div class="two-column">
+    <div class="column">
+      <!-- Left Column -->
+      <h2>Currently Reading: </h2>
+      <div class="profile-image">
         <a href="https://www.amazon.com/Heart-Buddhas-Teaching-Transforming-Liberation/dp/0767903692" target="_blank" rel="noopener noreferrer">
-            <img src="/heartOfBuddha.webp" alt="Book Title" style="width: 120px; height: auto; display: block;" />
+          <img src="/heartOfBuddha.webp" alt="Book Title" />
         </a>
+      </div>
+      <p class="small-text">Updated: May 2025</p>
     </div>
-    <p class="small-text">Updated:May 2025</p>
-  </div>
-  <div class="column">
-    <!-- Right Column -->
-    <h2>Currently Listening: </h2>
-    <div class="profile-image">
+    <div class="column">
+      <!-- Right Column -->
+      <h2>Currently Listening: </h2>
+      <div class="profile-image">
         <a href="https://open.spotify.com/album/6L5s2MnpJNhWA54koTN7UV?si=rVMk2OWXRTCljZ-0s0rZKw" target="_blank" rel="noopener noreferrer">
-            <img src="/laVoz.webp" alt="Song Title" style="width: 120px; height: auto; display: block;" />
+          <img src="/laVoz.webp" alt="Song Title" />
         </a>
+      </div>
+      <p class="small-text">Updated: May 2025</p>
     </div>
-    <p class="small-text">Updated:May 2025</p>
   </div>
-</div>
-
-
-
 
   <!-- Personal Text -->
   <div class="below-sections">
@@ -32,88 +31,132 @@
   </div>
 
   <!-- Links -->
-  <div class='me-links'>
+  <div class="me-links">
     <a href="https://open.spotify.com/user/gwh0mvhm5sx7oqyiuvjmyb8g5?si=c041cea875604cdc" target="_blank" rel="noopener noreferrer">
-        <img src="/spotify.webp" alt="Spotify" class="icon-link" />
+      <img src="/spotify.webp" alt="Spotify" class="icon-link" />
     </a>
     <a href="https://lichess.org/@/coredavid00" target="_blank" rel="noopener noreferrer">
-        <img src="/lichess.webp" alt="LinkedIn" class="icon-link" />
+      <img src="/lichess.webp" alt="LinkedIn" class="icon-link" />
     </a>
   </div>
-
 </div>
 
-
-
 <style>
+  .content-container {
+    width: 100%;
+    max-width: 100%;
+  }
 
-.two-column {
+  .two-column {
     display: flex;
     gap: 20px;
-}
+    margin-bottom: 20px;
+  }
 
-.column {
+  .column {
     flex: 1;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
 
-.small-text {
+  .column h2 {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .small-text {
     font-size: 0.6rem;
     color: #555;
     margin-top: 4px;
     font-style: italic;
-}
+  }
 
-.below-sections {
+  .below-sections {
     display: flex;
     flex-direction: column;
-    gap: var(--space-7);
-    margin-top: 2rem
-}
-  
-.profile-image {
-    flex: 1;
-    transition: all 0.3s ease;
-}
+    gap: var(--space-4);
+    margin: 2rem 0;
+    text-align: center;
+    padding: 0 10px;
+  }
 
-.profile-image img {
+  .profile-image {
     width: 100%;
-    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .profile-image img {
+    width: 120px;
+    height: auto;
     border-radius: 8px;
     transition: all 0.3s ease;
     cursor: pointer;
-}
+  }
 
-.profile-image img:hover {
+  .profile-image img:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
+  }
 
-.me-links {
+  .me-links {
     display: flex;
     gap: var(--space-4);
     margin-top: var(--space-4);
-}   
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-.icon-link {
+  .me-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-link {
     width: 32px;
-  height: 32px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
+    height: 32px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
 
-.icon-link:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-  cursor: pointer;
-}
+  .icon-link:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    cursor: pointer;
+  }
 
-
-
-@media (max-width: 768px) {
-    .profile-image img {
-      max-width: 200px;
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .two-column {
+      flex-direction: column;
+      gap: 30px;
     }
-}
 
+    .column {
+      width: 100%;
+    }
 
+    .profile-image img {
+      width: 120px;
+    }
+
+    .below-sections {
+      padding: 0 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .column h2 {
+      font-size: 1.2rem;
+    }
+
+    .profile-image img {
+      width: 100px;
+    }
+  }
 </style>
-

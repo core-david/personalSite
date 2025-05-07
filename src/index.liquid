@@ -35,10 +35,6 @@ layout: layouts/default.liquid
     </div>
   </section>
 
-  <div class='me-links'>
-    
-  </div>
-
   <section>
     <h2>Latest</h2>
     {% assign posts = collections.posts %}
@@ -49,12 +45,12 @@ layout: layouts/default.liquid
 </div>
 
 <style>
-
 .me-links {
   display: flex;
   gap: 16px; /* or use var(--space-4) if it's defined */
   margin-top: var(--space-4);
   align-items: center;
+  justify-content: flex-start; /* Align with text in desktop view */
 }
 
 .me-links a {
@@ -140,6 +136,9 @@ layout: layouts/default.liquid
     .profile-content {
       flex-direction: column-reverse;
       text-align: center;
+    }
+    .me-links {
+      justify-content: center; /* Center the links in mobile view */
     }
     .profile-links {
       justify-content: center;
